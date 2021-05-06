@@ -56,7 +56,7 @@ var timeCounter = setInterval(function () {
 
     if (xTime === 0) {
         clearInterval(timeCounter);
-        timerEl.innerHTML = `<button class="play">GIOCA</button>`;
+        timerEl.innerHTML = `<div id="play">GIOCA</div>`;
 
     } else {
         xTime = xTime - 1;
@@ -68,3 +68,25 @@ var timeCounter = setInterval(function () {
 
 
 
+/*
+
+document.getElementById('play').addEventListener("click", function () {
+
+
+    alert('Inserisci i numeri che hai visto poco fa, uno alla volta, in ordine');
+    var memoriaUtente = [];
+
+
+    while (memoriaUtente.length < 5) {
+        var x = Number(prompt('Per ogni numero, clicca su <OK>'));
+        memoriaUtente.push(x);
+    }
+
+    console.log("I numeri inseriti dall'utente sono " + memoriaUtente);
+
+
+});
+
+*/
+
+var playEl = document.getElementById('play');

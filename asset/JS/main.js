@@ -48,6 +48,7 @@ setTimeout(function () {
 // 2° modo : con timer visibile 
 
 var timerEl = document.querySelector(".timer");
+timerEl.innerHTML = `<div id="play">GIOCA</div>`;
 
 
 
@@ -57,6 +58,43 @@ var timeCounter = setInterval(function () {
     if (xTime === 0) {
         clearInterval(timeCounter);
         timerEl.innerHTML = `<div id="play">GIOCA</div>`;
+
+        // SE L'UTENTE CLICCA SU GIOCA, ALLORA GLI CHIEDO I NUMERI VISTI IN PRECEDENZA 
+        document.getElementById('play').addEventListener("click", function () {
+            alert('Inserisci i numeri che hai visto poco fa, uno alla volta, in ordine');
+            var memoriaUtente = [];
+            while (memoriaUtente.length < 5) {
+                var x = Number(prompt('Per ogni numero, clicca su <OK>'));
+                memoriaUtente.push(x);
+            }
+
+            console.log("I numeri inseriti dall'utente sono " + memoriaUtente);
+        });
+
+
+
+
+        // var risultato=0; 
+        // for (var i = 0; i < listNumber.length; i++) {
+
+        // if(listNumber.includes(memoriaUtente[i])){
+        // risultato +=memoriaUtente [i] ;
+
+        // } else{
+
+
+
+        // }
+
+
+
+
+
+
+
+
+
+
 
     } else {
         xTime = xTime - 1;
@@ -68,25 +106,8 @@ var timeCounter = setInterval(function () {
 
 
 
-/*
-
-document.getElementById('play').addEventListener("click", function () {
 
 
-    alert('Inserisci i numeri che hai visto poco fa, uno alla volta, in ordine');
-    var memoriaUtente = [];
 
 
-    while (memoriaUtente.length < 5) {
-        var x = Number(prompt('Per ogni numero, clicca su <OK>'));
-        memoriaUtente.push(x);
-    }
 
-    console.log("I numeri inseriti dall'utente sono " + memoriaUtente);
-
-
-});
-
-*/
-
-var playEl = document.getElementById('play');

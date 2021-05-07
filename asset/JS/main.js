@@ -27,7 +27,7 @@ alert('Cerca di ricordare i seguenti numeri: ' + listNumber);
 
 var timerEl = document.querySelector(".timer");
 
-var xTime = 1;
+var xTime = 31;
 var timeCounter = setInterval(function () {
 
     if (xTime === 0) {

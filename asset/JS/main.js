@@ -27,7 +27,7 @@ alert('Cerca di ricordare i seguenti numeri: ' + listNumber);
 
 var timerEl = document.querySelector(".timer");
 
-var xTime = 3;
+var xTime = 1;
 var timeCounter = setInterval(function () {
 
     if (xTime === 0) {
@@ -86,6 +86,8 @@ var timeCounter = setInterval(function () {
             if (matriceVerifica.length < 5 && matriceVerifica.length > 0) {
                 timerEl.innerHTML = `Il totale dei numeri trovati è: ${matriceVerifica.length} `;
                 timerEl.style.border = "2rem solid purple";
+
+
 
             } else if (matriceVerifica.length === 5) {
                 timerEl.innerHTML = `Complimenti, HAI VINTO!!!`;
